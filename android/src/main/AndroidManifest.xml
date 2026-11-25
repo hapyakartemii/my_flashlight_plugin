@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Normal permission for the torch: granted at install time, no dialog.
+         Merged into the app's manifest; the plugin checks it at runtime. -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <!-- The app still installs on devices without a flash
+         (tablets, emulators); the plugin then reports NO_FLASH. -->
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+</manifest>

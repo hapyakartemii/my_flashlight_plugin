@@ -1,0 +1,29 @@
+name: my_flashlight_plugin
+description: >-
+  Flutter plugin that toggles the device flashlight (camera torch) on Android
+  via CameraManager, with graceful degradation on other platforms.
+version: 1.0.0
+homepage: https://github.com/hapyakartemii/my_flashlight_plugin
+publish_to: 'none'
+
+environment:
+  sdk: ^3.12.2
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.hapyakartemii.my_flashlight_plugin
+        pluginClass: MyFlashlightPlugin
+      ios:
+        pluginClass: MyFlashlightPlugin
